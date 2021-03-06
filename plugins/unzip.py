@@ -118,7 +118,7 @@ async def unzip(bot, update):
                 for current_file in zip_file_contents:
                     cb_string = "ZIP:{}:ZIP".format(str(i))
                     inline_keyboard.append([
-                        pyrogram.InlineKeyboardButton(
+                        pyrogram.types.InlineKeyboardButton(
                             current_file,
                             callback_data=cb_string.encode("UTF-8")
                         )
@@ -126,14 +126,14 @@ async def unzip(bot, update):
                     i = i + 1
                 cb_string = "ZIP:{}:ZIP".format("ALL")
                 inline_keyboard.append([
-                    pyrogram.InlineKeyboardButton(
+                    pyrogram.types.InlineKeyboardButton(
                         "Upload All Files",
                         callback_data=cb_string.encode("UTF-8")
                     )
                 ])
                 cb_string = "ZIP:{}:ZIP".format("NONE")
                 inline_keyboard.append([
-                    pyrogram.InlineKeyboardButton(
+                    pyrogram.types.InlineKeyboardButton(
                         "Cancel",
                         callback_data=cb_string.encode("UTF-8")
                     )
